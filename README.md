@@ -81,7 +81,7 @@ CPA is calculated as `cost / conversions`.
    - Streamlit UI screenshot:
 
    <p align="center">
-     <img src="assets/streamlit_ui.PNG" alt="Streamlit UI" width="700"/>
+     <img src="assets/streamlit_ui.PNG" alt="Streamlit UI" width="500"/>
    </p>
 8. **Docker Container** (`Dockerfile`, `supervisord.conf`):
    - Containerizes the FastAPI server and Streamlit app.
