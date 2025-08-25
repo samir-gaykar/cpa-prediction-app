@@ -68,7 +68,9 @@ CPA is calculated as `cost / conversions`.
      - Partial Dependence Plots (PDP)
    - MLflow UI for experiment tracking:
 
-     ![MLflow UI](assets/mlflow_ui.PNG)
+   <p align="center">
+     <img src="assets/mlflow_ui.PNG" alt="MLflow UI" width="1500"/>
+   </p>
 5. **Inference Pipeline** (`inference.py`):
    - Built a pipeline with custom transformers and the final trained model for predictions.
    - Saved as `model.pkl` for reuse.
@@ -78,7 +80,9 @@ CPA is calculated as `cost / conversions`.
    - Interactive UI for inputting campaign parameters and visualizing predicted CPA.
    - Streamlit UI screenshot:
 
-     ![Streamlit UI](assets/streamlit_ui.PNG)
+   <p align="center">
+     <img src="assets/streamlit_ui.PNG" alt="Streamlit UI" width="700"/>
+   </p>
 8. **Docker Container** (`Dockerfile`, `supervisord.conf`):
    - Containerizes the FastAPI server and Streamlit app.
    - Uses `supervisord` to manage communication between the API and Streamlit UI.
