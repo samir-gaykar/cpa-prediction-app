@@ -87,7 +87,9 @@ CPA is calculated as `cost / conversions`.
 
 ### Project Architecture
 
-![Project Architecture](assets/architecture_diagram.PNG)
+<p align="center">
+  <img src="assets/architecture_diagram.PNG" alt="Project Architecture" width="225"/>
+</p>
 
 The architecture diagram illustrates the end-to-end workflow of the CPA prediction project:
 
