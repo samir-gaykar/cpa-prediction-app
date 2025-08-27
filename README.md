@@ -216,7 +216,6 @@ cpa-prediction-app/
 ### Future Improvements
 - Integrate real-time data feeds for dynamic predictions.
 - Explore deep learning models for complex patterns.
-- Enhance Streamlit UI with additional visualizations (e.g., SHAP plots).
 
 ### Contact
 For questions or feedback, reach out via GitHub Issues or [gaykarsamiry@gmail.com].
