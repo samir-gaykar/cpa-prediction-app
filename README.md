@@ -192,7 +192,7 @@ cpa-prediction-app/
 │
 ├── src/							# Core source code
 │   ├── app.py 						# Streamlit app for UI
-│   ├── server.py 					# FastAPI server for API endpoint
+│   └── server.py 					# FastAPI server for API endpoint
 │ 
 │
 ├── configs/						# Config files
@@ -205,7 +205,7 @@ cpa-prediction-app/
 │
 ├── Dockerfile						# Docker configuration for containerization
 ├── requirements.txt				# Python dependencies
-├── README.md 						# Project overview and instructions
+└── README.md 						# Project overview and instructions
 ```
 
 ### Additional Notes
