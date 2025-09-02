@@ -1,0 +1,16 @@
+# Unneeded local files
+Capture.PNG
+Docker_Commands.txt
+MLflow UI start command.txt
+
+# Docker-related
+Dockerfile
+.dockerignore
+
+# Python cache
+__pycache__/
+*.pyc
+
+# System files
+.DS_Store
+Thumbs.db
