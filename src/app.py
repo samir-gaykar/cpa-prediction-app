@@ -3,7 +3,7 @@ import requests
 
 st.set_page_config(page_title="CPA Prediction", layout="centered")
 
-st.title("📊 CPA Prediction App")
+st.title("CPA Prediction App")
 st.write("Enter details below to get a CPA prediction:")
 
 with st.form("prediction_form"):
