@@ -68,32 +68,32 @@ CPA is calculated as `cost / conversions`.
    #### Outlier Detection
    | **Aspect**                | **Details**                                                                 |
    |---------------------------|-----------------------------------------------------------------------------|
-   | **Methods Tried**         | IsolationForest, Local Outlier Factor (LOF), One-Class SVM, DBSCAN, Z-Score method |
-   | **Evaluation on Validation Set** | IsolationForest consistently provided the best results, achieving the lowest cross-validated RMSE. Followed by: Local Outlier Factor (LOF), One-Class SVM, DBSCAN, and Z-Score method. |
+   | **Methods Tried**         | • IsolationForest <br> • Local Outlier Factor (LOF) <br> • One-Class SVM <br> • DBSCAN <br> • Z-Score method |
+   | **Evaluation on Validation Set** | IsolationForest consistently provided the best results, achieving the lowest cross-validated RMSE. <br> Followed by: <br> • Local Outlier Factor (LOF) <br> • One-Class SVM <br> • DBSCAN <br> • Z-Score method |
    | **Decision**              | The final model uses IsolationForest for outlier detection.                 |
    | **Takeaway**              | By systematically comparing multiple approaches and validating their impact on downstream performance, IsolationForest was selected as the outlier removal method, ensuring an empirically justified, robust, and interpretable preprocessing step. |
 
    #### Skewed Features
    | **Aspect**                | **Details**                                                                 |
    |---------------------------|-----------------------------------------------------------------------------|
-   | **Methods Tried**         | Yeo-Johnson, Logarithmic (log), Square Root (sqrt), Box-Cox, Reciprocal, None |
-   | **Evaluation on Validation Set** | Log transformation produced the best results. Followed by: Yeo-Johnson, Box-Cox, Square Root (sqrt) and Reciprocal. |
+   | **Methods Tried**         | • Yeo-Johnson <br> • Logarithmic (log) <br> • Square Root (sqrt) <br> • Box-Cox <br> • Reciprocal <br> • None |
+   | **Evaluation on Validation Set** | Log transformation produced the best results. <br> Followed by: <br> • Yeo-Johnson <br> • Box-Cox <br> • Square Root (sqrt) <br> • Reciprocal |
    | **Decision**              | The final model used the log transformation on skewed features as it consistently reduced skewness and improved cross-validated RMSE. |
    | **Takeaway**              | This approach ensures that features are closer to a normal distribution which can improve model convergence, stability and overall predictive performance. |
 
    #### Encoding
    | **Aspect**                | **Details**                                                                 |
    |---------------------------|-----------------------------------------------------------------------------|
-   | **Methods Tried**         | Target Encoding, Leave-One-Out (LOO) Encoding, Binary Encoding, Frequency Encoding, Label Encoding |
-   | **Evaluation on Validation Set** | Target Encoding performed the best, providing the lowest cross-validated RMSE. Followed by: Leave-One-Out (LOO) Encoding, Binary Encoding, Frequency Encoding and Label Encoding. |
+   | **Methods Tried**         | • Target Encoding <br> • Leave-One-Out (LOO) Encoding <br> • Binary Encoding <br> • Frequency Encoding <br> • Label Encoding |
+   | **Evaluation on Validation Set** | Target Encoding performed the best, providing the lowest cross-validated RMSE. <br> Followed by: <br> • Leave-One-Out (LOO) Encoding <br> • Binary Encoding <br> • Frequency Encoding <br> • Label Encoding |
    | **Decision**              | The final model uses Target Encoding for categorical variables.             |
    | **Takeaway**              | This method captures the relationship between categorical features and the target variable more effectively than other encodings which improves model performance, especially in regression tasks. |
 
    #### Scaling
    | **Aspect**                | **Details**                                                                 |
    |---------------------------|-----------------------------------------------------------------------------|
-   | **Methods Tried**         | StandardScaler, RobustScaler, MinMaxScaler, MaxAbsScaler, QuantileTransformer, Normalizer, log1p |
-   | **Evaluation on Validation Set** | StandardScaler achieved the best performance in terms of cross-validated RMSE. Followed by: RobustScaler, MinMaxScaler, MaxAbsScaler, QuantileTransformer, Normalizer, and log1p transformation. |
+   | **Methods Tried**         | • StandardScaler <br> • RobustScaler <br> • MinMaxScaler <br> • MaxAbsScaler <br> • QuantileTransformer <br> • Normalizer <br> • log1p |
+   | **Evaluation on Validation Set** | StandardScaler achieved the best performance in terms of cross-validated RMSE. <br> Followed by: <br> • RobustScaler <br> • MinMaxScaler <br> • MaxAbsScaler <br> • QuantileTransformer <br> • Normalizer <br> • log1p transformation. |
    | **Decision**              | The final model uses StandardScaler for scaling numerical features.         |
    | **Takeaway**              | This approach standardizes features to have zero mean and unit variance which is generally effective for tree-based and gradient-boosting models in regression tasks. |
 
@@ -132,10 +132,10 @@ CPA is calculated as `cost / conversions`.
    | BaggingRegressor       | scikit-learn          |
    | HistGradientBoostingRegressor | scikit-learn    |
    | NuSVR                  | scikit-learn          |
-   | XGBoostRegressor       | external (xgboost)    |
-   | LGBMRegressor          | external (lightgbm)   |
-   | VotingRegressor        | scikit-learn (ensemble) |
-   | StackingRegressor      | scikit-learn (ensemble) |
+   | XGBoostRegressor       | external (XGBoost)    |
+   | LGBMRegressor          | external (LightGBM)   |
+   | VotingRegressor        | scikit-learn (Ensemble) |
+   | StackingRegressor      | scikit-learn (Ensemble) |
 
    - Selected the best-performing model after hyperparameter tuning.
    - Debugged using:
