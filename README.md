@@ -45,6 +45,7 @@ CPA is calculated as `cost / conversions`.
    | CPC Shows No Significant Difference Across Categories | 1.3918 | 0.0836            | No significant difference in CPC across categories  | <ul><li>Average CPC varies slightly by category but not significantly (p-value = 0.08).</li><li>No category consistently lowers/higher CPC.</li></ul> |
 
    - **Why Bar Plots?**
+     
      | **Reason**              | **Details**                                                                 |
      |-------------------------|-----------------------------------------------------------------------------|
      | Comparing categories    | Bar plots directly compare averages across discrete groups (e.g., publishers, categories). |
@@ -52,6 +53,7 @@ CPA is calculated as `cost / conversions`.
      | Highlighting magnitude  | Bar height shows performance differences clearly, aligning with insights.   |
      | Statistical complement  | Pairs with ANOVA for visual intuition and statistical rigor.                |
      - **Alternative Visualizations (Why not used?)**
+       
        | **Type**            | **Reason**                              |
        |---------------------|-----------------------------------------|
        | Box/Violin plots    | Show spread but may overwhelm non-technical readers. |
@@ -101,7 +103,7 @@ CPA is calculated as `cost / conversions`.
    | **Takeaway**              | This approach standardizes features to have zero mean and unit variance which is generally effective for tree-based and gradient-boosting models in regression tasks. |
 
 3. **Feature Engineering** (`feature_engineering.ipynb`):
-   - Added features:
+   - Added features: <br><br>
 
    | **Feature**          | **Description**                          |
    |-----------------------|------------------------------------------|
@@ -113,7 +115,7 @@ CPA is calculated as `cost / conversions`.
    | publisher_popularity | Popularity score of publisher            |
    | market_popularity    | Popularity score of market               |
 
-   - Selected features using:
+   - Selected features using: <br><br>
 
    | **Method**                        | **Reason**                              |
    |-----------------------------------|-----------------------------------------|
@@ -126,7 +128,7 @@ CPA is calculated as `cost / conversions`.
    - Split data into train, validation and test sets for robust evaluation.
    - Used RepeatedKFold cross-validation to ensure reliable model performance assessment.
    - Used MLflow for experiment tracking and Optuna for hyperparameter optimization.
-   - Evaluated multiple regression models:
+   - Evaluated multiple regression models: <br><br>
 
    | **Model**              | **Source**            |
    |------------------------|-----------------------|
@@ -141,7 +143,7 @@ CPA is calculated as `cost / conversions`.
    | StackingRegressor      | scikit-learn (Ensemble) |
 
    - Selected the best-performing model after hyperparameter tuning.
-   - Debugged using:
+   - Debugged using: <br><br>
 
    | **Method**                     | **Reason**                              |
    |--------------------------------|-----------------------------------------|
@@ -149,7 +151,7 @@ CPA is calculated as `cost / conversions`.
    | Feature interaction analysis with SHAP interaction values | Identifies feature interactions impacting predictions. |
    | Outlier inspection with SHAP values | Detects outliers influencing model output. |
 
-   - Visualized model performance with:
+   - Visualized model performance with: <br><br>
 
    | **Visualization**         | **Reason**                              |
    |---------------------------|-----------------------------------------|
