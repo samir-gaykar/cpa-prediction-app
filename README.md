@@ -300,7 +300,7 @@ cpa-prediction-app/
 │
 ├── Dockerfile						# Docker configuration for containerization
 ├── requirements.txt				# Python dependencies
-├── .dockerignore             # Exclude unnecessary files from Docker build context
+├── .dockerignore                   # Exclude unnecessary files from Docker build context
 └── README.md 						# Project overview and instructions
 ```
 
