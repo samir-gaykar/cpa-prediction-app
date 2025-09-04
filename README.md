@@ -68,32 +68,32 @@ CPA is calculated as `cost / conversions`.
    #### Outlier Detection
    | **Aspect**                | **Details**                                                                 |
    |---------------------------|-----------------------------------------------------------------------------|
-   | **Methods Tried**         | • IsolationForest <br> • Local Outlier Factor (LOF) <br> • One-Class SVM <br> • DBSCAN <br> • Z-Score method |
-   | **Evaluation on Validation Set** | IsolationForest consistently provided the best results, achieving the lowest cross-validated RMSE. <br> Followed by: <br> • Local Outlier Factor (LOF) <br> • One-Class SVM <br> • DBSCAN <br> • Z-Score method |
+   | **Methods Tried**         | <ul><li>IsolationForest</li><li>Local Outlier Factor (LOF)</li><li>One-Class SVM</li><li>DBSCAN</li><li>Z-Score method</li></ul> |
+   | **Evaluation on Validation Set** | IsolationForest consistently provided the best results, achieving the lowest cross-validated RMSE. <br> Followed by: <br> <ul><li>Local Outlier Factor (LOF)</li><li>One-Class SVM</li><li>DBSCAN</li><li>Z-Score method</li></ul> |
    | **Decision**              | The final model uses IsolationForest for outlier detection.                 |
    | **Takeaway**              | By systematically comparing multiple approaches and validating their impact on downstream performance, IsolationForest was selected as the outlier removal method, ensuring an empirically justified, robust, and interpretable preprocessing step. |
 
    #### Skewed Features
    | **Aspect**                | **Details**                                                                 |
    |---------------------------|-----------------------------------------------------------------------------|
-   | **Methods Tried**         | • Yeo-Johnson <br> • Logarithmic (log) <br> • Square Root (sqrt) <br> • Box-Cox <br> • Reciprocal <br> • None |
-   | **Evaluation on Validation Set** | Log transformation produced the best results. <br> Followed by: <br> • Yeo-Johnson <br> • Box-Cox <br> • Square Root (sqrt) <br> • Reciprocal |
+   | **Methods Tried**         | <ul><li>Yeo-Johnson</li><li>Logarithmic (log)</li><li>Square Root (sqrt)</li><li>Box-Cox</li><li>Reciprocal</li><li>None</li></ul> |
+   | **Evaluation on Validation Set** | Log transformation produced the best results. <br> Followed by: <br> <ul><li>Yeo-Johnson</li><li>Box-Cox</li><li>Square Root (sqrt)</li><li>Reciprocal</li></ul> |
    | **Decision**              | The final model used the log transformation on skewed features as it consistently reduced skewness and improved cross-validated RMSE. |
    | **Takeaway**              | This approach ensures that features are closer to a normal distribution which can improve model convergence, stability and overall predictive performance. |
 
    #### Encoding
    | **Aspect**                | **Details**                                                                 |
    |---------------------------|-----------------------------------------------------------------------------|
-   | **Methods Tried**         | • Target Encoding <br> • Leave-One-Out (LOO) Encoding <br> • Binary Encoding <br> • Frequency Encoding <br> • Label Encoding |
-   | **Evaluation on Validation Set** | Target Encoding performed the best, providing the lowest cross-validated RMSE. <br> Followed by: <br> • Leave-One-Out (LOO) Encoding <br> • Binary Encoding <br> • Frequency Encoding <br> • Label Encoding |
+   | **Methods Tried**         | <ul><li>Target Encoding</li><li>Leave-One-Out (LOO) Encoding</li><li>Binary Encoding</li><li>Frequency Encoding</li><li>Label Encoding</li></ul> |
+   | **Evaluation on Validation Set** | Target Encoding performed the best, providing the lowest cross-validated RMSE. <br> Followed by: <br> <ul><li>Leave-One-Out (LOO) Encoding</li><li>Binary Encoding</li><li>Frequency Encoding</li><li>Label Encoding</li></ul> |
    | **Decision**              | The final model uses Target Encoding for categorical variables.             |
    | **Takeaway**              | This method captures the relationship between categorical features and the target variable more effectively than other encodings which improves model performance, especially in regression tasks. |
 
    #### Scaling
    | **Aspect**                | **Details**                                                                 |
    |---------------------------|-----------------------------------------------------------------------------|
-   | **Methods Tried**         | • StandardScaler <br> • RobustScaler <br> • MinMaxScaler <br> • MaxAbsScaler <br> • QuantileTransformer <br> • Normalizer <br> • log1p |
-   | **Evaluation on Validation Set** | StandardScaler achieved the best performance in terms of cross-validated RMSE. <br> Followed by: <br> • RobustScaler <br> • MinMaxScaler <br> • MaxAbsScaler <br> • QuantileTransformer <br> • Normalizer <br> • log1p transformation. |
+   | **Methods Tried**         | <ul><li>StandardScaler</li><li>RobustScaler</li><li>MinMaxScaler</li><li>MaxAbsScaler</li><li>QuantileTransformer</li><li>Normalizer</li><li>log1p</li></ul> |
+   | **Evaluation on Validation Set** | StandardScaler achieved the best performance in terms of cross-validated RMSE. <br> Followed by: <br> <ul><li>RobustScaler</li><li>MinMaxScaler</li><li>MaxAbsScaler</li><li>QuantileTransformer</li><li>Normalizer</li><li>log1p</li></ul> |
    | **Decision**              | The final model uses StandardScaler for scaling numerical features.         |
    | **Takeaway**              | This approach standardizes features to have zero mean and unit variance which is generally effective for tree-based and gradient-boosting models in regression tasks. |
 
