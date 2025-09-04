@@ -4,7 +4,9 @@
 This project develops a machine learning solution to predict the Cost Per Application (CPA) for programmatic recruitment advertising campaigns run by a company across multiple publishers, markets and job categories. The goal is to optimize campaign efficiency by predicting CPA and identifying key performance drivers. The project includes exploratory data analysis (EDA), data cleaning, feature engineering, model training with experiment tracking, an inference pipeline, a FastAPI-based API, a Streamlit UI and Docker containerization for deployment. All components are designed to be production-ready and showcase a robust end-to-end data science workflow.
 
 ### Business Problem
-The company runs tailored advertising campaigns to generate job applications ("conversions") at a minimized CPA. Campaign performance varies due to factors like market (location), publisher (ad platform) and job category or industry. The challenge is to:
+The company runs tailored advertising campaigns to generate job applications ("conversions") at a minimized CPA. Campaign performance varies due to factors like market (location), publisher (ad platform) and job category or industry.
+
+The challenge is to:
 - **Predict CPA** outcomes before launching campaigns.
 - **Understand drivers** of CPA performance to guide campaign decisions.
 This project builds a CPA prediction model to optimize publisher, market and category selections.
@@ -29,8 +31,9 @@ CPA is calculated as `cost / conversions`.
 
 ### Project Components
 1. **Exploratory Data Analysis (EDA)** (`eda.ipynb`):
-   - Visualized CPA distributions and performed statistical hypothesis testing using ANOVA (`f_oneway`) to validate differences.
 
+   - Visualized CPA distributions and performed statistical hypothesis testing using ANOVA (`f_oneway`) to validate differences.
+<!-- -->
    | **Visualization**                    | **ANOVA F-statistic** | **ANOVA p-value** | **Hypothesis (H0)**                  | **Insight**                                                                 |
    |--------------------------------------|-----------------------|-------------------|--------------------------------------|-----------------------------------------------------------------------------|
    | Publisher Choice Has Limited Impact on CPA Across Top 10 Platforms | 1.5092               | 0.1405            | No significant difference in CPA between publishers | <ul><li>Average CPA does not significantly differ among top 10 publishers.</li><li>Choosing one is unlikely to drastically reduce costs per application.</li></ul> |
