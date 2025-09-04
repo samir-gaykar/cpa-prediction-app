@@ -56,6 +56,7 @@ CPA is calculated as `cost / conversions`.
        | Scatter plots       | Best for continuous variable relationships, not the focus here. |
 
 2. **Data Cleaning** (`data_preprocessing.ipynb`):
+   - Removed rows where `cost` = 0, `clicks` = 0, and `conversions` = 1 to exclude invalid campaign data with applications but no associated cost or clicks
    - Removed outliers and duplicates.
    - Checked for skewed data and applied transformations as needed.
    - Performed encoding (e.g., target encoding for categorical variables).
