@@ -69,7 +69,7 @@ CPA is calculated as `cost / conversions`.
    | **Aspect**                | **Details**                                                                 |
    |---------------------------|-----------------------------------------------------------------------------|
    | **Methods Tried**         | <ul><li>IsolationForest</li><li>Local Outlier Factor (LOF)</li><li>One-Class SVM</li><li>DBSCAN</li><li>Z-Score method</li></ul> |
-   | **Evaluation on Validation Set** | IsolationForest consistently provided the best results, achieving the lowest cross-validated RMSE. <br> Followed by: <br> <ul><li>Local Outlier Factor (LOF)</li><li>One-Class SVM</li><li>DBSCAN</li><li>Z-Score method</li></ul> |
+   | **Evaluation on Validation Set** | <ul><li>IsolationForest consistently provided the best results, achieving the lowest cross-validated RMSE.</li><li>Followed by: <ul><li>Local Outlier Factor (LOF)</li><li>One-Class SVM</li><li>DBSCAN</li><li>Z-Score method</li></ul></li></ul> |
    | **Decision**              | The final model uses IsolationForest for outlier detection.                 |
    | **Takeaway**              | By systematically comparing multiple approaches and validating their impact on downstream performance, IsolationForest was selected as the outlier removal method, ensuring an empirically justified, robust, and interpretable preprocessing step. |
 
@@ -77,7 +77,7 @@ CPA is calculated as `cost / conversions`.
    | **Aspect**                | **Details**                                                                 |
    |---------------------------|-----------------------------------------------------------------------------|
    | **Methods Tried**         | <ul><li>Yeo-Johnson</li><li>Logarithmic (log)</li><li>Square Root (sqrt)</li><li>Box-Cox</li><li>Reciprocal</li><li>None</li></ul> |
-   | **Evaluation on Validation Set** | Log transformation produced the best results. <br> Followed by: <br> <ul><li>Yeo-Johnson</li><li>Box-Cox</li><li>Square Root (sqrt)</li><li>Reciprocal</li></ul> |
+   | **Evaluation on Validation Set** | <ul><li>Log transformation produced the best results.</li><li>Followed by: <ul><li>Yeo-Johnson</li><li>Box-Cox</li><li>Square Root (sqrt)</li><li>Reciprocal</li></ul></li></ul> |
    | **Decision**              | The final model used the log transformation on skewed features as it consistently reduced skewness and improved cross-validated RMSE. |
    | **Takeaway**              | This approach ensures that features are closer to a normal distribution which can improve model convergence, stability and overall predictive performance. |
 
