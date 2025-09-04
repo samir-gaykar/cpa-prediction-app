@@ -85,7 +85,7 @@ CPA is calculated as `cost / conversions`.
    | **Aspect**                | **Details**                                                                 |
    |---------------------------|-----------------------------------------------------------------------------|
    | **Methods Tried**         | <ul><li>Target Encoding</li><li>Leave-One-Out (LOO) Encoding</li><li>Binary Encoding</li><li>Frequency Encoding</li><li>Label Encoding</li></ul> |
-   | **Evaluation on Validation Set** | Target Encoding performed the best, providing the lowest cross-validated RMSE. <br> Followed by: <br> <ul><li>Leave-One-Out (LOO) Encoding</li><li>Binary Encoding</li><li>Frequency Encoding</li><li>Label Encoding</li></ul> |
+   | **Evaluation on Validation Set** | <ul><li>Target Encoding performed the best, providing the lowest cross-validated RMSE.</li><li>Followed by: <ul><li>Leave-One-Out (LOO) Encoding</li><li>Binary Encoding</li><li>Frequency Encoding</li><li>Label Encoding</li></ul></li></ul> |
    | **Decision**              | The final model uses Target Encoding for categorical variables.             |
    | **Takeaway**              | This method captures the relationship between categorical features and the target variable more effectively than other encodings which improves model performance, especially in regression tasks. |
 
@@ -93,7 +93,7 @@ CPA is calculated as `cost / conversions`.
    | **Aspect**                | **Details**                                                                 |
    |---------------------------|-----------------------------------------------------------------------------|
    | **Methods Tried**         | <ul><li>StandardScaler</li><li>RobustScaler</li><li>MinMaxScaler</li><li>MaxAbsScaler</li><li>QuantileTransformer</li><li>Normalizer</li><li>log1p</li></ul> |
-   | **Evaluation on Validation Set** | StandardScaler achieved the best performance in terms of cross-validated RMSE. <br> Followed by: <br> <ul><li>RobustScaler</li><li>MinMaxScaler</li><li>MaxAbsScaler</li><li>QuantileTransformer</li><li>Normalizer</li><li>log1p</li></ul> |
+   | **Evaluation on Validation Set** | <ul><li>StandardScaler achieved the best performance in terms of cross-validated RMSE.</li><li>Followed by: <ul><li>RobustScaler</li><li>MinMaxScaler</li><li>MaxAbsScaler</li><li>QuantileTransformer</li><li>Normalizer</li><li>log1p</li></ul></li></ul> |
    | **Decision**              | The final model uses StandardScaler for scaling numerical features.         |
    | **Takeaway**              | This approach standardizes features to have zero mean and unit variance which is generally effective for tree-based and gradient-boosting models in regression tasks. |
 
