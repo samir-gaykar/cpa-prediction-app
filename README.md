@@ -132,8 +132,8 @@ CPA is calculated as `cost / conversions`.
    | BaggingRegressor       | scikit-learn          |
    | HistGradientBoostingRegressor | scikit-learn    |
    | NuSVR                  | scikit-learn          |
-   | XGBoostRegressor       | external (XGBoost)    |
-   | LGBMRegressor          | external (LightGBM)   |
+   | XGBoostRegressor       | XGBoost    |
+   | LGBMRegressor          | LightGBM   |
    | VotingRegressor        | scikit-learn (Ensemble) |
    | StackingRegressor      | scikit-learn (Ensemble) |
 
