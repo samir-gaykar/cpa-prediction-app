@@ -162,10 +162,6 @@ CPA is calculated as `cost / conversions`.
    | Partial Dependence Plots (PDP) | Shows effect of features on predictions. |
 
    - MLflow UI for experiment tracking:
-
-   <p align="center">
-     <img src="assets/mlflow_ui.PNG" alt="MLflow UI" width="1500"/>
-   </p>
 5. **Inference Pipeline** (`inference.py`):
    - Built a pipeline with custom transformers and the final trained model for predictions.
    - Saved as `model.pkl` for reuse.
